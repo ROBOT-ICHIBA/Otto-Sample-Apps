@@ -1,0 +1,96 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="base_setup_loop" id="UI+;I,-gF:kMJd~FkX.:" x="111" y="-88">
+    <statement name="DO">
+      <block type="otto9_configuration" id="b8crElJQ4gMm4~AiRi#p">
+        <field name="PIN_YL">2</field>
+        <field name="PIN_YR">3</field>
+        <field name="PIN_RL">4</field>
+        <field name="PIN_RR">5</field>
+        <field name="PIN_Buzzer">13</field>
+        <next>
+          <block type="variables_set_init" id="m2DnvZt0e}DBaP=F6Bdi">
+            <field name="VAR">mode</field>
+            <field name="VARIABLE_SETTYPE_TYPE">NUMBER</field>
+            <value name="VALUE">
+              <block type="math_number" id="fA!YAA9):ht|(sO~-]_[">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="LOOP">
+      <block type="controls_if" id="oSUtq|#A5GSYk9dN??D)">
+        <value name="IF0">
+          <block type="button_touch_sensor2" id="_t}zXJHqfxyLNedCO2g}">
+            <field name="PIN_BUTTON">A0</field>
+            <field name="LOGIC">FALSE</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="otto_sound" id="`94qWl+S(u1Jo)$XqHpp">
+            <field name="otto_sound">S_surprise</field>
+            <next>
+              <block type="math_change" id="_AZ]fky[?@53;/Q[BmuR">
+                <field name="VAR">mode</field>
+                <value name="DELTA">
+                  <block type="math_number" id="*~~,jA%KO`;n8kw{-QrF">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_switch" id="iE(asCJH{@,!1x.XS;?%">
+            <mutation casebreak="2" default="1"></mutation>
+            <field name="SWVAR">mode</field>
+            <value name="CASE0">
+              <block type="math_number" id="cf}*f_Bi3Iip2bh2pUht">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="otto_home" id="cX8m4y=lmSh{#f-|t(2#"></block>
+            </statement>
+            <value name="CASE1">
+              <block type="math_number" id="pX#mKZ5s6k};^`SjxZ/j">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+            <statement name="DO1">
+              <block type="otto_move" id="X571NW!UQQly^S89W8!z">
+                <field name="otto_move_sens">FORWARD</field>
+                <field name="otto_move_speed">1000</field>
+              </block>
+            </statement>
+            <value name="CASE2">
+              <block type="math_number" id="}-;E)G#lswxox5vQ=+X|">
+                <field name="NUM">2</field>
+              </block>
+            </value>
+            <statement name="DO2">
+              <block type="otto_move" id="l4`uAA^+QbkB)Bwlj6[8">
+                <field name="otto_move_sens">RIGHT</field>
+                <field name="otto_move_speed">1000</field>
+              </block>
+            </statement>
+            <statement name="DEFAULT">
+              <block type="variables_set" id="_[O#Cpv=+H]%mLT-{qIW">
+                <field name="VAR">mode</field>
+                <value name="VALUE">
+                  <block type="math_number" id="_##/UwuzC^*66hMZ//_:">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
