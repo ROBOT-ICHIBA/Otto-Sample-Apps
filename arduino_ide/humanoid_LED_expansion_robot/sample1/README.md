@@ -6,4 +6,13 @@ https://www.youtube.com/watch?v=4XbDfNiqSbQ&t=31s
 
 [![sample app video](https://img.youtube.com/vi/4XbDfNiqSbQ/0.jpg)](https://www.youtube.com/watch?v=4XbDfNiqSbQ&t=31s)
 
+* Update 2022 Dec-12
+
+  Latest OttoDIYLib doesn't contain a part of the function this sample app needs. 
+  For short-term worksround, please download and use following OttoDIYLib along whith this source code:
+
+  https://github.com/ROBOT-ICHIBA/OttoDIYLibClassic/archive/refs/heads/master.zip
+
+
+
 
